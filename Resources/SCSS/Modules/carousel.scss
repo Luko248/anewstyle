@@ -13,8 +13,7 @@
         content: '';
         background-image: radial-gradient(hsla(0, 0%, 0%, 50%), transparent);
         z-index: 2;
-    }
-    
+    } 
 
     &.is-active{
         --c-item-photo_scale: 1.2;

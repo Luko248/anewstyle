@@ -927,11 +927,6 @@ address {
       --btn-padding-y: 1.2rem;
       --btn-font-size: medium;
       --btn-width: 16rem; } }
-  @media (hover: hover) {
-    .button:hover {
-      --btn-bg-color: rgba(0, 0, 0, 0);
-      --btn-color: var(--color-primary);
-      --icon-trans-x: 50%; } }
 
 .burger {
   --burger-display: none;

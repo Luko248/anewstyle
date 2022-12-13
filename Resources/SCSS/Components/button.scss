@@ -30,9 +30,9 @@
         --btn-font-size: medium;
         --btn-width: 16rem;
     }
-    @include hover{
-        --btn-bg-color: #{$color-trans};
-        --btn-color: var(--color-primary);
-        --icon-trans-x: 50%;
-    }
+    // @include hover{
+    //     --btn-bg-color: #{$color-trans};
+    //     --btn-color: var(--color-primary);
+    //     --icon-trans-x: 50%;
+    // }
 }
