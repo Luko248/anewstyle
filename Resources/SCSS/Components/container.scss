@@ -1,0 +1,49 @@
+@import "../base/global";
+
+.container {
+    --container-pad-x: #{$gap-xxl};
+    --container-width: 55%;
+    --container-min-width: #{$width-laptop-s};
+    width: var(--container-width);
+    min-width: var(--container-min-width);
+    padding: 0 var(--container-pad-x);
+    margin: 0 auto;
+
+    @include res-max-laptop-l {
+        --container-width: 75%;
+        --container-min-width: 0;
+    }
+
+    @include res-max-laptop-m {
+        --container-width: 85%;  
+    }
+
+    @include res-max-laptop-s {
+        --container-width: 90%;  
+    }
+
+    @include res-max-tablet {
+        --container-width: 100%;
+    }
+
+    @include res-max-mobile-l{
+        --container-pad-x: #{$gap-xl};
+    }
+
+    @include res-max-mobile-m{
+        --container-pad-x: #{$gap-l};
+    }
+
+    &--gallery{
+        --container-pad-x: 4.5vw;
+        
+        @include res-min-laptop-l{
+            --container-width: 100%;
+            --container-min-width: 0;          
+        } 
+    
+        @include res-max-laptop-l {
+            --container-pad-x: #{$gap-xxl};
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import '../base/global';
+
+footer {
+  padding: $gap-l;
+  background-color: $color-bg-darken;
+
+  > .footer__copy {
+    width: 100%;
+    text-align: center;
+
+    small {
+      font-family: $font-text;
+      font-size: small;
+      color: $color-font;
+    }
+  }
+}

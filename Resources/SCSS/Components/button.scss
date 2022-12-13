@@ -1,0 +1,47 @@
+@import "../base/global";
+
+.button{
+    --btn-color: var(--color-white);
+    --btn-bg-color: #{$color-bg-darken};
+    --btn-padding-x: #{$gap-xxl};
+    --btn-padding-y: #{$gap-l};
+    --btn-width: 20rem;
+    --btn-font-size: large;
+    --icon-trans-x: 0;
+    @include flex-set(inline-flex, row, nowrap, $gap-l, center, center, center);
+    min-width: var(--btn-width);
+    background-color: var(--btn-bg-color);
+    border-radius: 100vmax;
+    font-family: $font-text;
+    font-size: var(--btn-font-size);
+    font-weight: 400;
+    line-height: 1;
+    color: var(--btn-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color var(--trans-time) var(--trans-fnc), color var(--trans-time) var(--trans-fnc), border-color var(--trans-time) var(--trans-fnc);
+    cursor: pointer;
+    padding-block: var(--btn-padding-y);
+    padding-inline: var(--btn-padding-x);
+
+    @include res-max-laptop-s{
+        --btn-padding-x: #{$gap-l};
+        --btn-padding-y: 1.2rem;
+        --btn-font-size: medium;
+        --btn-width: 16rem;
+    }
+
+    &:hover{
+        --btn-bg-color: #{$color-bg-dark};
+        --btn-color: var(--color-primary);
+        --icon-trans-x: 50%;
+    }
+
+    > .icon{
+        transition: translate var(--trans-time) var(--trans-fnc);
+        fill: currentColor;
+        stroke: currentColor;
+        stroke-width: .5px; 
+        translate: var(--icon-trans-x) 3%;
+    }
+}
