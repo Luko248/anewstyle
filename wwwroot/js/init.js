@@ -3798,6 +3798,8 @@ exports.initBeforeAfterSlider = void 0;
 function initBeforeAfterSlider() {
     const baSlider = document.querySelector('#baSlider');
     const baSliderInput = document.querySelector('input[type=range]');
+    baSlider.style.setProperty('--ba-position', `${baSliderInput.value}%`);
+    baSlider.style.setProperty('--ba-inline-size', `${baSlider.clientWidth}px`);
     baSliderInput.addEventListener('input', (e) => {
         let input = e.target;
         baSlider.style.setProperty('--ba-position', `${input.value}%`);
@@ -3860,8 +3862,17 @@ exports.initNav = void 0;
 function initNav() {
     const menu = document.querySelector('.menu');
     const burger = document.querySelector('#menuBtn');
+    const body = document.body;
+    const navItems = document.querySelectorAll('.menu > li > a');
     burger.addEventListener('click', () => {
         menu.classList.toggle('menu--open');
+        body.classList.toggle('overflow-hidden');
+    });
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            menu.classList.remove('menu--open');
+            body.classList.remove('overflow-hidden');
+        });
     });
 }
 exports.initNav = initNav;
@@ -3880,12 +3891,17 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.initSplide = void 0;
 const splide_1 = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.cjs.js");
 function initSplide() {
-    var splide = new splide_1.Splide('.splide', {
-        type: 'loop',
-        perPage: 1,
-        autoplay: true,
-    });
-    splide.mount();
+    if (window.innerWidth >= 1024) {
+        var splide = new splide_1.Splide('.splide', {
+            type: 'loop',
+            perPage: 1,
+            autoplay: true,
+        });
+        splide.mount();
+    }
+    else {
+        document.querySelector('.splide').remove();
+    }
 }
 exports.initSplide = initSplide;
 

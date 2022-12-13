@@ -25,7 +25,6 @@ p, span, small{
     font-family: $font-title;
     font-size: var(--title-font-size);
     color: var(--title-color);
-    text-align: center;
 
     @include res-max-laptop-l{
         --title-font-size: 3.2em;
@@ -112,6 +111,7 @@ p, span, small{
 }
 
 address{
-    font-size: large;
+    font-family: $font-text;
+    font-size: clamp($gap-l, 2vh, $gap-xl);
     color: $color-font;
 }

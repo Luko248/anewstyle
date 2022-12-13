@@ -3,7 +3,7 @@
 section{
     --sec-bg: #{$color-bg};
     --sec-pad-y: 10vh;
-    scroll-margin-top: 0;
+    scroll-margin-top: var(--sec_scroll-mg, 0);
     padding: var(--sec-pad-y) 0;
     background-color: var(--sec-bg);
 
@@ -13,6 +13,7 @@ section{
 
     @include res-max-tablet{
         --sec-pad-y: 8vh;
+        --sec_scroll-mg: var(--nav-height);
     }
 
     &.dark{
@@ -20,6 +21,10 @@ section{
     }
     &.no-pt{
         padding-top: 0;
+    }
+
+    &.no-p{
+        padding: 0;
     }
 
     &.full-height{

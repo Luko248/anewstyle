@@ -92,49 +92,57 @@
 			</button>
 		</div>
 	</nav>
-	<header class="splide" aria-label="Header carousel">
-		<div class="splide__slider">
-			<div class="splide__track">
-				<ul class="splide__list">
-					<li class="splide__slide c-item">
-						<div class="c-item__photo">
-							<img src="wwwroot/images/gallery/dark/rock_foil_2400x1200.png" alt="Kámen 1" />
-						</div>
-						<div class="c-item__content">
-							<h1>Kámen jako osvětlení interiéru</h1>
-							<a class="button" href="#o-nas" aria-label="Přejít na sekci o nás">Chci vědet více</a>
-						</div>
-					</li>
-					<li class="splide__slide c-item">
-						<div class="c-item__photo">
-							<img src="wwwroot/images/gallery/light/rock_foil_2000x1200.png" alt="Kámen 2" />
-						</div>
-						<div class="c-item__content">
-							<strong>Kámen jako osvětlení interiéru</strong>
-							<a class="button" href="#galerie" aria-label="Přejít na sekci Galerie">Zobrazit Galerii</a>
-						</div>
-					</li>
-					<li class="splide__slide c-item">
-						<div class="c-item__photo">
-							<img src="wwwroot/images/gallery/dark/rock_foil_2200x1200.png" alt="Kámen 3" />
-						</div>
-						<div class="c-item__content">
-							<strong>Kámen jako osvětlení interiéru</strong>
-							<a class="button" href="#kontakt" aria-label="Přejít na kontakt">Kontaktujte nás</a>
-						</div>
-					</li>
-					<li class="splide__slide c-item">
-						<div class="c-item__photo">
-							<img src="wwwroot/images/gallery/dark/rock_foil_2000x800.png" alt="Kámen 4" />
-						</div>
-						<div class="c-item__content">
-							<strong>Kámen jako osvětlení interiéru</strong>
-							<a class="button" href="#galerie" aria-label="Přejít na sekci Galerie">Zobrazit Galerii</a>
-						</div>
-					</li>
-				</ul>
-			</div>
+	<header>
+		<div class="header__mobile-content">
+			<strong>A New Style</strong>
+			<a class="button" href="#o-nas" aria-label="Přejít na sekci o nás">Chci vědet více</a>
 		</div>
+		<section class="splide no-p" aria-label="Header carousel">
+			<div class="splide__slider">
+				<div class="splide__track">
+					<ul class="splide__list">
+						<li class="splide__slide c-item">
+							<div class="c-item__photo">
+								<img src="wwwroot/images/gallery/dark/rock_foil_2400x1200.png" alt="Kámen 1" />
+							</div>
+							<div class="c-item__content">
+								<h1>Kámen jako osvětlení interiéru</h1>
+								<a class="button" href="#o-nas" aria-label="Přejít na sekci o nás">Chci vědet více</a>
+							</div>
+						</li>
+						<li class="splide__slide c-item">
+							<div class="c-item__photo">
+								<img src="wwwroot/images/gallery/light/rock_foil_2000x1200.png" alt="Kámen 2" />
+							</div>
+							<div class="c-item__content">
+								<strong>Kámen jako osvětlení interiéru</strong>
+								<a class="button" href="#galerie" aria-label="Přejít na sekci Galerie">Zobrazit
+									Galerii</a>
+							</div>
+						</li>
+						<li class="splide__slide c-item">
+							<div class="c-item__photo">
+								<img src="wwwroot/images/gallery/dark/rock_foil_2200x1200.png" alt="Kámen 3" />
+							</div>
+							<div class="c-item__content">
+								<strong>Kámen jako osvětlení interiéru</strong>
+								<a class="button" href="#kontakt" aria-label="Přejít na kontakt">Kontaktujte nás</a>
+							</div>
+						</li>
+						<li class="splide__slide c-item">
+							<div class="c-item__photo">
+								<img src="wwwroot/images/gallery/dark/rock_foil_2000x800.png" alt="Kámen 4" />
+							</div>
+							<div class="c-item__content">
+								<strong>Kámen jako osvětlení interiéru</strong>
+								<a class="button" href="#galerie" aria-label="Přejít na sekci Galerie">Zobrazit
+									Galerii</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 	</header>
 	<main>
 		<section id="o-nas" class="dark">
@@ -149,14 +157,11 @@
 				<div id="baSlider" class="ba-slider">
 					<div class="image-container">
 						<div class="image-before">
-							<img class="slider-image"
-								src="https://i.picsum.photos/id/1015/6000/4000.jpg?hmac=aHjb0fRa1t14DTIEBcoC12c5rAXOSwnVlaA5ujxPQ0I"
-								alt="color photo" />
+							<img class="slider-image" src="wwwroot/images/backgrounds/before.jpg" alt="color photo" />
 							<strong>Ve dne</strong>
 						</div>
 						<div class="image-after">
-							<img class="slider-image"
-								src="https://i.picsum.photos/id/1015/6000/4000.jpg?hmac=aHjb0fRa1t14DTIEBcoC12c5rAXOSwnVlaA5ujxPQ0I"
+							<img class="slider-image" src="wwwroot/images/backgrounds/after.jpg"
 								alt="black and white" />
 							<strong>V noci</strong>
 						</div>
@@ -272,6 +277,17 @@
 								<p><b>Rozměr</b> 2000 x 800 mm</p>
 							</div>
 						</a>
+						<a href="wwwroot/images/gallery/dark/rock_foil_2000x800.png"
+							aria-label="Kámen jako osvětlení interiéru" data-fancybox="gallery" class="gitem">
+							<div class="gitem__photo">
+								<img src="wwwroot/images/gallery/dark/rock_foil_2000x800.png" alt="Kámen 4" />
+							</div>
+							<div class="gitem__content">
+								<strong>Kámen DARK</strong>
+								<p>Kámen jako osvětlení interiéru</p>
+								<p><b>Rozměr</b> 2000 x 800 mm</p>
+							</div>
+						</a>
 					</div>
 			</div>
 		</section>
@@ -279,22 +295,33 @@
 		<section id="kontakt" class="dark">
 			<div class="container">
 				<div class="contact__wrapper">
-					<img src="wwwroot/images/logos/logo.png" alt="ANEWSTYLE Logo" width="120px">
+					<img src="wwwroot/images/logos/logo.png" alt="ANEWSTYLE Logo" width="150px">
 					<div>
 						<h2 class="title">Kontakujte nás</h2>
 						<p class="desc">
 							Pro více informací nás neváhejte kontaktovat.
 						</p>
-						<h2 class="title title--s">Adresa</h2>
-						<address>
-							Hybešova 308/61<br>
-							Staré Brno, 602 00<br><br>
-							IČ: 123456<br>
-							DIČ: CZ123456<br>
-						</address>
-						<br>
-						<br>
-						<a class="button" href="mailto:Peter.Musil@email.cz">Napsat zprávu</a>
+						<div class="contact__grid">
+							<div>
+								<h2 class="title title--s">Fakturační adresa</h2>
+								<address>
+									OSM s.r.o.<br>
+									Hudcova 86/54, Medlánky<br>
+									621 00, Brno<br><br>
+									IČ: 47903180<br>
+									DIČ: CZ47903180<br>
+								</address>
+							</div>
+							<div>
+								<h2 class="title title--s">Kontaktní osoba</h2>
+								<address>
+									Pavel Otáhal<br>
+									<a class="link" href="tel:+420 541 217 755" aria-label="Telefonní číslo">+420 541 217 755</a><br>
+									<a class="link" href="mailto:osm.brno@gmail.com" aria-label="Kontaktní email">osm.brno@gmail.com</a><br>
+								</address>
+								<a class="button" href="mailto:osm.brno@gmail.com">Napsat zprávu</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -5,25 +5,17 @@
     --link-text-decor: none;
     --link-text-trans: none;
     --icon-trans-x: 0;
-    --link-font-size: 2rem;
+    --link-font-size: 1em;
     @include flex-set(inline-flex, row, nowrap, 1.2rem);
     font-family: $font-text;
     font-size: var(--link-font-size);
     color: var(--link-color);
     text-decoration: var(--link-text-decor);
-    text-transform: var(--link-text-trans);
+    text-transform: underline;
     transition: color var(--trans-time) var(--trans-fnc);
 
     @include res-max-tablet{
         --trans-time: 0;
-    }
-
-    @include res-max-mobile-l{
-        --link-font-size: large;
-    }
-
-    @include res-max-mobile-m{
-        --link-font-size: medium;
     }
 
     &--uppercase{

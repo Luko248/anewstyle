@@ -2,25 +2,21 @@
 
 .c-item {
     --c-item-photo_scale: 1;
+    --c-item-title_opacity: 0;
+    --c-item-title_translate-y: -.5em;
     --c-item-button_opacity: 0;
     --c-item-button_translate-y: 1em;
     position: relative;
     min-block-size: 100vh;
-
-    &:after{
-        position: absolute;
-        inset: 0;
-        content: '';
-        background-image: radial-gradient(hsla(0, 0%, 0%, 50%), transparent);
-        z-index: 2;
-    } 
+    max-block-size: 2048px;
+    overflow: hidden;
 
     &.is-active{
         --c-item-photo_scale: 1.2;
         --c-item-button_opacity: 1;
         --c-item-button_translate-y: 0;
-        --c-item-text_animation: showText;
-        --c-item-box_animation: whiteBox;
+        --c-item-title_opacity: 1;
+        --c-item-title_translate-y: 0;
     }
 
     &__photo {
@@ -40,10 +36,12 @@
         }
     }
 
-    &__content {
-        @include position;
-        @include flex-set(flex, column, wrap, var(--c_gap, 3em), center, center);
-        padding-block-end: 1em;
+    &__content {     
+        @include flex-set(flex, column, wrap, var(--c_gap, 3em), flex-start, center);
+        position: absolute;
+        inset: auto 10vw 20vh auto;
+        padding-block-start: 4em;
+        padding-block-end: 2em;
         overflow: hidden;
         z-index: 3;
 
@@ -51,29 +49,21 @@
         > strong {
             position: relative;
             display: inline-block;
+            opacity: var(--c-item-title_opacity);
             font-family: $font-title;
-            font-size: clamp($gap-xxl, 6em, 20vh);
+            font-size: clamp($gap-xxl, 8em, 20vh);
             font-weight: 400;     
             line-height: 1;
-            color: var(--content_color, var(--color-trans));
-            animation: var(--c-item-text_animation) .1s linear forwards;
-            animation-delay: 1s;
-
-            &:after{
-                position: absolute;
-                inset: -.1em;
-                content: "";
-                background-color: var(--color-white);
-                animation: var(--c-item-box_animation) 2s linear forwards;
-                translate: -100%;
-            }
+            color: var(--color-white);
+            text-shadow: var(--color-black) 0 0 1.5rem;
+            translate: 0 var(--c-item-title_translate-y); 
+            transition: opacity 1s var(--trans-fnc), translate 1s var(--trans-fnc);
         }
 
         > .button{
             opacity: var(--c-item-button_opacity);
             translate: 0 var(--c-item-button_translate-y);
-            transition: opacity 1s var(--trans-fnc), 1s var(--trans-fnc);
-            transition-delay: 1s;
+            transition: opacity 1s var(--trans-fnc) .5s, translate 1s var(--trans-fnc) .5s, background-color var(--trans-time) var(--trans-fnc), color var(--trans-time) var(--trans-fnc);
         }
     }
 }
@@ -81,23 +71,5 @@
 @keyframes showText{
     to{
         --content_color: var(--color-white);
-    }
-}
-
-@keyframes whiteBox{
-    from{
-        translate: -100%;
-        scale: 0 1;
-
-    }
-
-    40%, 60%{
-        translate: 0;
-        scale: 1 1;
-    }
-
-    to{
-        translate: 100%;
-        scale: 0 1;
     }
 }

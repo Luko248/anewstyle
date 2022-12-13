@@ -3,12 +3,13 @@
     --ba-position: 50%;
     position: relative;
     display: grid;
+    max-height: 80vh;
     overflow: hidden;
     place-content: center;
 
     img {
         display: block;
-        max-width: 100%;
+        inline-size: var(--ba-inline-size);
       }
   }
 
@@ -16,7 +17,7 @@
     position: absolute;
     inset: auto auto $gap-l 50%;
     font-family: $font-title;
-    font-size: 2.5em;
+    font-size: clamp($gap-l, 3vh, 2em);
     font-weight: 300;
     color: var(--color-white);
     translate: -50%;
@@ -37,7 +38,8 @@
         position: absolute;
         inset: auto auto 1em calc(var(--ba-inline-size) / 2);
         opacity: .7;
-        font-size: 8em;
+        font-size: clamp($gap-xxl, 7vh, 8em);
+        letter-spacing: .1em;
         color: var(--color-white);
         text-transform: uppercase;
         white-space: nowrap;
@@ -49,7 +51,6 @@
     position: absolute;
     inset: 0;
     inline-size: var(--ba-position);
-    filter: grayscale(100%);
     z-index: 2;
   }
 

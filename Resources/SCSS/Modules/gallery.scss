@@ -32,6 +32,16 @@
   text-decoration: none;
   overflow: hidden;
 
+  &:first-child{
+    @include grid-col-span(var(--gitem_colspan, 2));
+    @include grid-row-span(var(--gitem_rowspan, 2));
+
+    @include res-max-mobile-l{
+      --gitem_colspan: 1;
+      --gitem_rowspan: 1;
+    }
+  }
+
   @include hover {
     --photo_scale: 1.1;
     --text_translate-x: 0;
@@ -66,7 +76,8 @@
     > strong {
       display: block;
       margin-block-end: .5em;
-      font-size: 1.5em;;
+      font-size: 1.5em;
+      text-shadow: var(--color-black) 0 0 .5rem;
     }
 
     > p{
