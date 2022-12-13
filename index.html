@@ -27,9 +27,7 @@
 
 	<!-- Stylesheets
 	============================================= -->
-	<!-- <link
-		href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700,800,900|Roboto+Condensed|Poppins:600,400&display=swap"
-		rel="stylesheet" type="text/css" /> -->
+	<link rel="stylesheet" href="https://use.typekit.net/mcf8cbw.css">
 
 	<link rel="stylesheet" type="text/css"
 		href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css">
@@ -39,24 +37,51 @@
 </head>
 
 <body>
+	<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
+		xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<defs>
+			<symbol id="icon-menu" viewBox="0 0 32 32">
+				<path
+					d="M1.945 7.906h28.11c1.073 0 1.945-0.872 1.945-1.945s-0.872-1.945-1.945-1.945h-28.11c-1.073 0-1.945 0.873-1.945 1.945s0.873 1.945 1.945 1.945z">
+				</path>
+				<path
+					d="M30.055 14.055h-28.11c-1.073 0-1.945 0.873-1.945 1.945s0.873 1.945 1.945 1.945h28.11c1.073 0 1.945-0.872 1.945-1.945s-0.872-1.945-1.945-1.945z">
+				</path>
+				<path
+					d="M30.055 24.094h-28.11c-1.073 0-1.945 0.873-1.945 1.946s0.873 1.945 1.945 1.945h28.11c1.073 0 1.945-0.872 1.945-1.945s-0.872-1.946-1.945-1.946z">
+				</path>
+			</symbol>
+			<symbol id="icon-move" viewBox="0 0 32 32">
+				<path
+					d="M13.718 5.217c-0.226-0.109-0.495-0.079-0.691 0.078l-12.78 10.191c-0.155 0.124-0.246 0.312-0.246 0.511s0.091 0.387 0.246 0.511l12.78 10.195c0.118 0.094 0.262 0.143 0.408 0.143 0.096 0 0.193-0.021 0.283-0.065 0.226-0.109 0.37-0.338 0.37-0.589v-20.386c0-0.251-0.144-0.48-0.37-0.589z">
+				</path>
+				<path
+					d="M31.754 15.486l-12.78-10.194c-0.196-0.157-0.465-0.187-0.691-0.078s-0.37 0.338-0.37 0.589v20.395c0 0.251 0.143 0.48 0.37 0.589 0.090 0.044 0.187 0.065 0.283 0.065 0.145 0 0.29-0.048 0.408-0.143l12.78-10.2c0.156-0.124 0.246-0.312 0.246-0.511 0-0.2-0.091-0.388-0.246-0.512z">
+				</path>
+			</symbol>
+		</defs>
+	</svg>
+
 	<nav>
-		<a href="/" class="logo">
-			<img src="wwwroot/images/logos/logo.png" alt="ANEWSTYLE Logo">
-		</a>
-		<ul class="menu">
-			<li>
-				<a href="#co-delame">Co děláme</a>
-			</li>
-			<li>
-				<a href="#galerie">Galerie</a>
-			</li>
-			<li>
-				<a href="#kontakt">Kontakt</a>
-			</li>
-		</ul>
-		<button aria-label="Menu button" class="burger" id="menuBtn">
-			Menu
-		</button>
+		<div class="container nav__container">
+			<a href="/" class="logo">
+				<img src="wwwroot/images/logos/logo.png" alt="ANEWSTYLE Logo">
+			</a>
+			<ul class="menu">
+				<li>
+					<a href="#o-nas">O nás</a>
+				</li>
+				<li>
+					<a href="#galerie">Galerie</a>
+				</li>
+				<li>
+					<a href="#kontakt">Kontakt</a>
+				</li>
+			</ul>
+			<button aria-label="Menu button" class="burger" id="menuBtn">
+				<svg class="icon icon-menu"><use xlink:href="#icon-menu"></use></svg>
+			</button>
+		</div>
 	</nav>
 	<header class="splide" aria-label="Header carousel">
 		<div class="splide__slider">
@@ -67,8 +92,8 @@
 							<img src="wwwroot/images/gallery/dark/rock_foil_2400x1200.png" alt="Kámen 1" />
 						</div>
 						<div class="c-item__content">
-							<h1>Kámen jako osvětlení interiéru</h1>
-							<small>Chci vědet více</small>
+							<h1>Kámen jako osvětlení interiéru 1</h1>
+							<a class="button">Chci vědet více</a>
 						</div>
 					</li>
 					<li class="splide__slide c-item">
@@ -76,7 +101,7 @@
 							<img src="wwwroot/images/gallery/light/rock_foil_2000x1200.png" alt="Kámen 2" />
 						</div>
 						<div class="c-item__content">
-							<h1>Kámen jako osvětlení interiéru</h1>
+							<h1>Kámen jako osvětlení interiéru 2</h1>
 							<small>Chci vědet více</small>
 						</div>
 					</li>
@@ -85,7 +110,7 @@
 							<img src="wwwroot/images/gallery/dark/rock_foil_2200x1200.png" alt="Kámen 3" />
 						</div>
 						<div class="c-item__content">
-							<h1>Kámen jako osvětlení interiéru</h1>
+							<h1>Kámen jako osvětlení interiéru 3</h1>
 							<small>Chci vědet více</small>
 						</div>
 					</li>
@@ -94,7 +119,7 @@
 							<img src="wwwroot/images/gallery/dark/rock_foil_2000x800.png" alt="Kámen 4" />
 						</div>
 						<div class="c-item__content">
-							<h1>Kámen jako osvětlení interiéru</h1>
+							<h1>Kámen jako osvětlení interiéru 4</h1>
 							<small>Chci vědet více</small>
 						</div>
 					</li>
@@ -103,14 +128,88 @@
 		</div>
 	</header>
 	<main>
-		<section id="onas">
-
+		<section id="o-nas" class="dark">
+			<div class="container">
+				<h2 class="title">O nás</h2>
+				<p class="desc">
+					It is a long established fact that a reader will be distracted by the readable content of a page
+					when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+					distribution of letters, as opposed to using 'Content here, content here', making it look like
+					readable English.
+				</p>
+				<div id="baSlider" class="ba-slider">
+					<div class="image-container">
+						<img class="image-before slider-image"
+							src="https://i.picsum.photos/id/1015/6000/4000.jpg?hmac=aHjb0fRa1t14DTIEBcoC12c5rAXOSwnVlaA5ujxPQ0I"
+							alt="color photo" />
+						<img class="image-after slider-image"
+							src="https://i.picsum.photos/id/1015/6000/4000.jpg?hmac=aHjb0fRa1t14DTIEBcoC12c5rAXOSwnVlaA5ujxPQ0I"
+							alt="black and white" />
+					</div>
+					<input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown"
+						class="slider" />
+					<div class="slider-line" aria-hidden="true"></div>
+					<div class="slider-button" aria-hidden="true">
+						<svg class="icon icon-move" fill="currentColor" width="30" height="30"><use xlink:href="#icon-move"></use></svg>
+					</div>
+				</div>
+			</div>
 		</section>
 
 		<section id="galerie">
 			<div class="container">
 				<h2 class="title">Galerie</h3>
+					<p class="desc">
+						It is a long established fact that a reader will be distracted by the readable content of a page
+						when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+						distribution of letters, as opposed to using 'Content here, content here', making it look like
+						readable English.
+					</p>
 					<div class="gallery">
+						<a href="wwwroot/images/gallery/dark/rock_foil_2400x1200.png"
+							aria-label="Kámen jako osvětlení interiéru" data-fancybox="gallery" class="gitem">
+							<div class="gitem__photo">
+								<img src="wwwroot/images/gallery/dark/rock_foil_2400x1200.png" alt="Kámen 1" />
+							</div>
+							<div class="gitem__content">
+								<strong>Kámen DARK</strong>
+								<p>Kámen jako osvětlení interiéru</p>
+								<p><b>Rozměr</b> 2400 x 1200 mm</p>
+							</div>
+						</a>
+						<a href="wwwroot/images/gallery/light/rock_foil_2000x1200.png"
+							aria-label="Kámen jako osvětlení interiéru" data-fancybox="gallery" class="gitem">
+							<div class="gitem__photo">
+								<img src="wwwroot/images/gallery/light/rock_foil_2000x1200.png" alt="Kámen 2" />
+							</div>
+							<div class="gitem__content">
+								<strong>Kámen LIGHT</strong>
+								<p>Kámen jako osvětlení interiéru</p>
+								<p><b>Rozměr</b> 2000 x 1200 mm</p>
+							</div>
+						</a>
+						<a href="wwwroot/images/gallery/dark/rock_foil_2200x1200.png"
+							aria-label="Kámen jako osvětlení interiéru" data-fancybox="gallery" class="gitem">
+							<div class="gitem__photo">
+								<img src="wwwroot/images/gallery/dark/rock_foil_2200x1200.png" alt="Kámen 3" />
+							</div>
+							<div class="gitem__content">
+								<strong>Kámen DARK</strong>
+								<p>Kámen jako osvětlení interiéru</p>
+								<p><b>Rozměr</b> 2200 x 1200 mm</p>
+							</div>
+						</a>
+						<a href="wwwroot/images/gallery/dark/rock_foil_2000x800.png"
+							aria-label="Kámen jako osvětlení interiéru" data-fancybox="gallery" class="gitem">
+							<div class="gitem__photo">
+								<img src="wwwroot/images/gallery/dark/rock_foil_2000x800.png" alt="Kámen 4" />
+							</div>
+							<div class="gitem__content">
+								<strong>Kámen DARK</strong>
+								<p>Kámen jako osvětlení interiéru</p>
+								<p><b>Rozměr</b> 2000 x 800 mm</p>
+							</div>
+						</a>
 						<a href="wwwroot/images/gallery/dark/rock_foil_2400x1200.png"
 							aria-label="Kámen jako osvětlení interiéru" data-fancybox="gallery" class="gitem">
 							<div class="gitem__photo">

@@ -1,0 +1,67 @@
+
+.ba-slider {
+    --ba-position: 50%;
+    position: relative;
+    display: grid;
+    overflow: hidden;
+    place-content: center;
+
+    img {
+        display: block;
+        max-width: 100%;
+      }
+  }
+  
+  .slider-image {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    object-position: left;
+  }
+  
+  .image-before {
+    position: absolute;
+    inset: 0;
+    inline-size: var(--ba-position);
+    filter: grayscale(100%)
+  }
+  
+  .slider {
+    position: absolute;
+    inset: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .slider:focus-visible ~ .slider-button {
+    outline: 5px solid black;
+    outline-offset: 3px;
+  }
+  
+  .slider-line {
+    position: absolute;
+    inset: 0;
+    left: var(--ba-position);
+    inline-size: .2rem;
+    block-size: 100%;
+    background-color: #fff;
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+  
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    left: var(--ba-position);
+    display: grid;
+    place-items: center;
+    block-size: 4rem;
+    aspect-ratio: 1;
+    background-color: var(--color-white);
+    border-radius: 100vmax;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 1px 1px hsla(0, 50%, 2%, .5);
+    pointer-events: none;
+  }

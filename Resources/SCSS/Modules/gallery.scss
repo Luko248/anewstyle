@@ -4,7 +4,7 @@
   @include grid-columns(
     grid,
     repeat(var(--col-count, 4), minmax($gap-m, 1fr)),
-    var(--gap, #{$gap-xl}),
+    var(--gap, #{$gap-s}),
     var(--align-items, flex-start)
   );
 
@@ -26,6 +26,7 @@
 .gitem {
   --photo_scale: 1;
   --text_translate-x: calc(-100% - #{$gap-xxl});
+  --content_backgdrop-filter: blur(0);
   position: relative;
   display: block;
   text-decoration: none;
@@ -34,6 +35,7 @@
   @include hover {
     --photo_scale: 1.1;
     --text_translate-x: 0;
+    --content_backgdrop-filter: blur(.1em);
   }
 
   &__photo {
@@ -58,6 +60,8 @@
     background-color: hsla(0, 0%, 0%, .3);
     font-size: medium;
     color: white;
+    transition: backdrop-filter .2s linear;
+    backdrop-filter: var(--content_backgdrop-filter);
 
     > strong {
       display: block;

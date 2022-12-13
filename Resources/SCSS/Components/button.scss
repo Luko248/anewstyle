@@ -2,18 +2,18 @@
 
 .button{
     --btn-color: var(--color-white);
-    --btn-bg-color: #{$color-bg-darken};
+    --btn-bg-color: #{$color-trans};
     --btn-padding-x: #{$gap-xxl};
     --btn-padding-y: #{$gap-l};
     --btn-width: 20rem;
     --btn-font-size: large;
     --icon-trans-x: 0;
     @include flex-set(inline-flex, row, nowrap, $gap-l, center, center, center);
+    @include border('def', .2em, var(--color-white));
     min-width: var(--btn-width);
     padding-block: var(--btn-padding-y);
     padding-inline: var(--btn-padding-x);
     background-color: var(--btn-bg-color);
-    border-radius: 100vmax;
     font-family: $font-text;
     font-size: var(--btn-font-size);
     font-weight: 400;
@@ -30,18 +30,9 @@
         --btn-font-size: medium;
         --btn-width: 16rem;
     }
-
-    &:hover{
-        --btn-bg-color: #{$color-bg-dark};
+    @include hover{
+        --btn-bg-color: #{$color-trans};
         --btn-color: var(--color-primary);
         --icon-trans-x: 50%;
-    }
-
-    > .icon{ 
-        translate: var(--icon-trans-x) 3%;
-        transition: translate var(--trans-time) var(--trans-fnc);
-        fill: currentColor;
-        stroke: currentColor;
-        stroke-width: .5px;
     }
 }

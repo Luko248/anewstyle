@@ -3786,6 +3786,28 @@ exports["default"] = Splide;
 
 /***/ }),
 
+/***/ "./Resources/Scripts/beforeAfterSlider.ts":
+/*!************************************************!*\
+  !*** ./Resources/Scripts/beforeAfterSlider.ts ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.initBeforeAfterSlider = void 0;
+function initBeforeAfterSlider() {
+    const baSlider = document.querySelector('#baSlider');
+    const baSliderInput = document.querySelector('input[type=range]');
+    baSliderInput.addEventListener('input', (e) => {
+        let input = e.target;
+        baSlider.style.setProperty('--ba-position', `${input.value}%`);
+    });
+}
+exports.initBeforeAfterSlider = initBeforeAfterSlider;
+
+
+/***/ }),
+
 /***/ "./Resources/Scripts/detectAvifSupport.ts":
 /*!************************************************!*\
   !*** ./Resources/Scripts/detectAvifSupport.ts ***!
@@ -3927,12 +3949,14 @@ var exports = __webpack_exports__;
   \***********************************/
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
+const beforeAfterSlider_1 = __webpack_require__(/*! ./beforeAfterSlider */ "./Resources/Scripts/beforeAfterSlider.ts");
 const detectAvifSupport_1 = __webpack_require__(/*! ./detectAvifSupport */ "./Resources/Scripts/detectAvifSupport.ts");
 const fancyBox_1 = __webpack_require__(/*! ./fancyBox */ "./Resources/Scripts/fancyBox.ts");
 const splitejs_1 = __webpack_require__(/*! ./splitejs */ "./Resources/Scripts/splitejs.ts");
-document.addEventListener("DOMContentLoaded", function () {
-    (0, splitejs_1.initSplide)();
+document.addEventListener("DOMContentLoaded", () => {
     (0, detectAvifSupport_1.detectAvifSupport)();
+    (0, splitejs_1.initSplide)();
+    (0, beforeAfterSlider_1.initBeforeAfterSlider)();
     (0, fancyBox_1.initFancyBox)();
 });
 

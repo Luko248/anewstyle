@@ -1,13 +1,13 @@
 @import "../Base/global";
 
 nav {
-    @include flex-set(flex, row, nowrap, 0, center, var(--nav-justify-content, space-between), center);
     position: fixed;
     top: 0;
-    left: 0;
+    left: 0;  
+    display: grid;
+    place-items: center;
     width: 100%;
     height: var(--nav-height);
-    padding: 0 $gap-xl;
     background-color: var(--color-bg-nav);
     color: var(--nav-color, #{$color-font});
     z-index: 999;
@@ -16,20 +16,16 @@ nav {
         --nav-justify-content: space-between;
         --color-bg-nav: #{$color-bg-nav-mobile};
     }
+}
 
-    &__logo {
-        --logo-display: block;
-        display: var(--logo-display);
-
-        @include res-max-tablet {
-            --logo-display: none;
-        }
-    }
+.nav__container{
+    @include flex-set(flex, row, nowrap, 0, center, var(--nav-justify-content, space-between), center);
 }
 
 .logo {
     display: block;
-    block-size: 4rem;
+    block-size: 6rem;
+    padding: 0;
     > img {
         display: block;
         block-size: 100%;
@@ -41,7 +37,7 @@ nav {
         var(--menu-display, inline-flex),
         var(--menu-flex-direction, row),
         nowrap,
-        var(--menu-gap, #{$gap-xxl}),
+        var(--menu-gap, 5em),
         center,
         center,
         var(--menu-align-content, center)

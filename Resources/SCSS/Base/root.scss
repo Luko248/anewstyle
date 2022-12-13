@@ -25,7 +25,7 @@
     --font-text: #{$font-text};
     --font-title: #{$font-title};
     --border-width: 1px;
-    --nav-height: 5rem;
+    --nav-height: 8rem;
 
     @include res-max-laptop-s{
         --nav-height: 7rem;

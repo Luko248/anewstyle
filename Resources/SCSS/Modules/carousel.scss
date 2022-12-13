@@ -22,41 +22,42 @@
             @include position;
             position: relative;
             display: block;
-            inline-size: 100%;
+            min-inline-size: 100%;
+            min-block-size: 100%;
         }
     }
 
     &__content {
         @include position;
+        @include flex-set(flex, column, wrap, var(--c_gap, 2em), center, center);
         overflow: hidden;
         > h1,
         strong {
             position: relative;
-            font-size: 5em;     
-            color: var(--color-trans);
+            font-family: $font-title;
+            font-size: clamp($gap-xxl, 6em, 20vh);     
+            line-height: 1;
+            color: var(--content_color, var(--color-trans));
+            text-shadow: var(--content_text-shadow, var(--color-trans) 1px 0 10px);
             animation: var(--c-item-text_animation) .1s linear forwards;
             animation-delay: 1s;
 
             &:after{
                 position: absolute;
-                inset: 0;
+                inset: -.1em;
                 content: "";
                 background-color: var(--color-white);
                 animation: var(--c-item-box_animation) 2s linear forwards;
                 translate: -100%;
             }
         }
-
-        > small,
-        > a {
-            
-        }
     }
 }
 
 @keyframes showText{
     to{
-        color: white;    
+        --content_color: var(--color-white);
+        --content_text-shadow: var(--color-primary) 1px 0 10px;  
     }
 }
 
