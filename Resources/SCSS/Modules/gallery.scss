@@ -4,7 +4,7 @@
   @include grid-columns(
     grid,
     repeat(var(--col-count, 4), minmax($gap-m, 1fr)),
-    var(--gap, #{$gap-xxl}),
+    var(--gap, #{$gap-xl}),
     var(--align-items, flex-start)
   );
 
@@ -25,15 +25,19 @@
 
 .gitem {
   --photo_scale: 1;
+  --text_translate-x: calc(-100% - #{$gap-xxl});
+  position: relative;
   display: block;
+  text-decoration: none;
   overflow: hidden;
 
-  @include hover{
+  @include hover {
     --photo_scale: 1.1;
+    --text_translate-x: 0;
   }
 
-  &__photo{
-    position:relative;
+  &__photo {
+    position: relative;
     inline-size: 100%;
     aspect-ratio: 16 / 9;
 
@@ -42,7 +46,37 @@
       display: block;
       inline-size: 100%;
       scale: var(--photo_scale);
-      transition: scale var(--trans-time) var(--trans-fnc);
+      transition: scale .5s ease-in-out;
+    }
+  }
+
+  &__content {
+    @include flex-set(flex, column, nowrap, .5em, flex-start, flex-start);
+    position: absolute;
+    inset: 0;
+    padding: #{$gap-xl};
+    background-color: hsla(0, 0%, 0%, .3);
+    font-size: medium;
+    color: white;
+
+    > strong {
+      display: block;
+      margin-block-end: .5em;
+      font-size: 1.5em;;
+    }
+
+    > p{
+      display: inline-block;
+      padding: #{$gap-s} #{$gap-m};  
+      margin: 0;  
+      background-color: var(--color-white);
+      color: var(--color-black);
+      translate: var(--text_translate-x);
+      transition: translate .2s linear;
+
+      &:last-child{
+        transition-delay: .05s;
+      }
     }
   }
 }
