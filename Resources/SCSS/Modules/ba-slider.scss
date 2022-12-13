@@ -11,6 +11,18 @@
         max-width: 100%;
       }
   }
+
+  .image-container + span{
+    position: absolute;
+    inset: auto auto $gap-l 50%;
+    font-family: $font-title;
+    font-size: 2.5em;
+    font-weight: 300;
+    color: var(--color-white);
+    translate: -50%;
+    z-index: 3;
+    pointer-events: none;
+  }
   
   .slider-image {
     inline-size: 100%;
@@ -23,7 +35,8 @@
     overflow: hidden;
     >strong{
         position: absolute;
-        inset: auto auto .5em calc(var(--ba-inline-size) / 2);
+        inset: auto auto 1em calc(var(--ba-inline-size) / 2);
+        opacity: .7;
         font-size: 8em;
         color: var(--color-white);
         text-transform: uppercase;
