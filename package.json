@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "name": "cts_corp_website",
-  "description": "Webpack with stylelint config. Updated on 30.3.2022",
+  "name": "anewstyle_npm_config",
+  "description": "Webpack with stylelint config. Updated on 13.12.2022",
   "private": true,
   "main": "./postcss.config.js",
   "author": "Lukáš Chylík",
@@ -53,6 +53,7 @@
     "bundle:css": "npm run stylelint && npm run compile:scss && postcss wwwroot/css/style.css --config ./postcss.config.js | cleancss -o wwwroot/css/style.min.css",
     "compile:scss": "node-sass --source-map=true Resources/SCSS/style.scss wwwroot/css/style.css",
     "stylelint": "stylelint --fix Resources/SCSS/**/*.scss --custom-syntax postcss-scss",
-    "watch:scss": "npm run bundle:css & watch \"npm run bundle:css\" Resources/SCSS"
+    "watch:scss": "npm run bundle:css & watch \"npm run bundle:css\" Resources/SCSS",
+    "browser-sync": "browser-sync start --proxy https://localhost:57566/ --https --files=\"wwwroot/css/*.css\" \"wwwroot/js/*.js\""
   }
 }

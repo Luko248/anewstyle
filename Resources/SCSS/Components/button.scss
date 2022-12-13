@@ -10,6 +10,8 @@
     --icon-trans-x: 0;
     @include flex-set(inline-flex, row, nowrap, $gap-l, center, center, center);
     min-width: var(--btn-width);
+    padding-block: var(--btn-padding-y);
+    padding-inline: var(--btn-padding-x);
     background-color: var(--btn-bg-color);
     border-radius: 100vmax;
     font-family: $font-text;
@@ -21,8 +23,6 @@
     text-transform: uppercase;
     transition: background-color var(--trans-time) var(--trans-fnc), color var(--trans-time) var(--trans-fnc), border-color var(--trans-time) var(--trans-fnc);
     cursor: pointer;
-    padding-block: var(--btn-padding-y);
-    padding-inline: var(--btn-padding-x);
 
     @include res-max-laptop-s{
         --btn-padding-x: #{$gap-l};
@@ -37,11 +37,11 @@
         --icon-trans-x: 50%;
     }
 
-    > .icon{
+    > .icon{ 
+        translate: var(--icon-trans-x) 3%;
         transition: translate var(--trans-time) var(--trans-fnc);
         fill: currentColor;
         stroke: currentColor;
-        stroke-width: .5px; 
-        translate: var(--icon-trans-x) 3%;
+        stroke-width: .5px;
     }
 }

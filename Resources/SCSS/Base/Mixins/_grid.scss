@@ -9,10 +9,10 @@
 
 @mixin grid-columns($display: grid, $template: repeat(1, minmax(1.6rem, 1fr)), $gap: 0, $align-items: flex-start, $justify-content: flex-start, $align-content: flex-start) {
     display: $display;
+    grid-template-columns: $template;
     align-items: $align-items;
     align-content: $align-content;
     justify-content: $justify-content;
-    grid-template-columns: $template;
 
     @if $gap != 0 {
         gap: $gap;
@@ -25,10 +25,10 @@
 @mixin grid-rows($display: grid, $template: repeat(1, minmax(1.6rem, 1fr)), $gap: 0, $align-items: flex-start, $justify-content: flex-start, $align-content: flex-start) {
    
     display: $display;
+    grid-template-rows: $template;
     align-items: $align-items;
     align-content: $align-content;
     justify-content: $justify-content;
-    grid-template-rows: $template;
 
     @if $gap != 0 {
         gap: $gap;

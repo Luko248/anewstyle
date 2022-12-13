@@ -1,13 +1,10 @@
 @import "../base/global";
 
 .container {
-    --container-pad-x: #{$gap-xxl};
-    --container-width: 55%;
-    --container-min-width: #{$width-laptop-s};
-    width: var(--container-width);
-    min-width: var(--container-min-width);
-    padding: 0 var(--container-pad-x);
-    margin: 0 auto;
+    inline-size: var(--container-width, 75%);
+    min-inline-size: var(--container-min-width, #{$width-laptop-s});
+    padding-inline: var(--container-pad-x, #{$gap-xxl});
+    margin-inline: auto;
 
     @include res-max-laptop-l {
         --container-width: 75%;
@@ -32,18 +29,5 @@
 
     @include res-max-mobile-m{
         --container-pad-x: #{$gap-l};
-    }
-
-    &--gallery{
-        --container-pad-x: 4.5vw;
-        
-        @include res-min-laptop-l{
-            --container-width: 100%;
-            --container-min-width: 0;          
-        } 
-    
-        @include res-max-laptop-l {
-            --container-pad-x: #{$gap-xxl};
-        }
     }
 }
