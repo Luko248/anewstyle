@@ -110,3 +110,8 @@ p, span, small{
         font-size: inherit;
     }
 }
+
+address{
+    font-size: large;
+    color: $color-font;
+}

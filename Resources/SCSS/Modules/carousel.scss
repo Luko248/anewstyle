@@ -54,7 +54,7 @@
             display: inline-block;
             font-family: $font-title;
             font-size: clamp($gap-xxl, 6em, 20vh);
-            font-weight: 500;     
+            font-weight: 400;     
             line-height: 1;
             color: var(--content_color, var(--color-trans));
             animation: var(--c-item-text_animation) .1s linear forwards;
