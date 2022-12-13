@@ -1,9 +1,9 @@
 @import "../base/global";
 
 .icon{  
-    --icon-size: #{$gap-l};
+    --icon-size: #{$gap-xl};
    display: block;
-   width: var(--icon-size);
-   aspect-ratio: 1 / 1;  
+   inline-size: var(--icon-size);
+   aspect-ratio: 1;  
    fill: currentColor;
 }

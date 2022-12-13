@@ -24,8 +24,13 @@ nav {
 
 .logo {
     display: block;
-    block-size: 6rem;
+    block-size: var(--logo_size, 6rem);
     padding: 0;
+
+    @include res-max-tablet {
+        --logo_size: 4rem;
+    }
+
     > img {
         display: block;
         block-size: 100%;
@@ -60,7 +65,8 @@ nav {
         --menu-align-content: flex-start;
         --menu-bg: #{$color-bg-darken};
         --menu-pad-top: 15vh;
-        @include position(100%, 50%, -50%, 0);
+        position: absolute;
+        inset: 100% 0 auto 0;
     }
 
     &--open {
@@ -89,15 +95,6 @@ nav {
             --nav-color: var(--color-primary);
             text-decoration: underline;
         }
-    }
-}
-
-.burger {
-    display: var(--burger_display, none);
-    color: var(--color-white);
-
-    @include res-max-tablet {
-        --burger_display: inline-block;
     }
 }
 

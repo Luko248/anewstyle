@@ -3847,6 +3847,27 @@ exports.initFancyBox = initFancyBox;
 
 /***/ }),
 
+/***/ "./Resources/Scripts/nav.ts":
+/*!**********************************!*\
+  !*** ./Resources/Scripts/nav.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.initNav = void 0;
+function initNav() {
+    const menu = document.querySelector('.menu');
+    const burger = document.querySelector('#menuBtn');
+    burger.addEventListener('click', () => {
+        menu.classList.toggle('menu--open');
+    });
+}
+exports.initNav = initNav;
+
+
+/***/ }),
+
 /***/ "./Resources/Scripts/splitejs.ts":
 /*!***************************************!*\
   !*** ./Resources/Scripts/splitejs.ts ***!
@@ -3952,12 +3973,14 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const beforeAfterSlider_1 = __webpack_require__(/*! ./beforeAfterSlider */ "./Resources/Scripts/beforeAfterSlider.ts");
 const detectAvifSupport_1 = __webpack_require__(/*! ./detectAvifSupport */ "./Resources/Scripts/detectAvifSupport.ts");
 const fancyBox_1 = __webpack_require__(/*! ./fancyBox */ "./Resources/Scripts/fancyBox.ts");
+const nav_1 = __webpack_require__(/*! ./nav */ "./Resources/Scripts/nav.ts");
 const splitejs_1 = __webpack_require__(/*! ./splitejs */ "./Resources/Scripts/splitejs.ts");
 document.addEventListener("DOMContentLoaded", () => {
     (0, detectAvifSupport_1.detectAvifSupport)();
     (0, splitejs_1.initSplide)();
     (0, beforeAfterSlider_1.initBeforeAfterSlider)();
     (0, fancyBox_1.initFancyBox)();
+    (0, nav_1.initNav)();
 });
 
 })();

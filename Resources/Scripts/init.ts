@@ -1,6 +1,7 @@
 import { initBeforeAfterSlider } from "./beforeAfterSlider"
 import { detectAvifSupport } from "./detectAvifSupport"
 import { initFancyBox } from "./fancyBox"
+import { initNav } from "./nav"
 import { initSplide} from "./splitejs"
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -8,4 +9,5 @@ document.addEventListener("DOMContentLoaded", () => {
     initSplide()
     initBeforeAfterSlider() 
     initFancyBox()
+    initNav()
   })
