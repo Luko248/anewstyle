@@ -7,7 +7,6 @@
     --btn-padding-y: #{$gap-l};
     --btn-width: 20rem;
     --btn-font-size: large;
-    --icon-trans-x: 0;
     @include flex-set(inline-flex, row, nowrap, $gap-l, center, center, center);
     @include border('def', .15em, var(--color-white));
     min-width: var(--btn-width);
@@ -30,9 +29,9 @@
         --btn-font-size: medium;
         --btn-width: 16rem;
     }
-    // @include hover{
-    //     --btn-bg-color: #{$color-trans};
-    //     --btn-color: var(--color-primary);
-    //     --icon-trans-x: 50%;
-    // }
+    
+    @include hover{
+        --btn-bg-color: #{$color-white};
+        --btn-color: var(--color-secondary);
+    }
 }

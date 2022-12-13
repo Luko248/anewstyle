@@ -1,0 +1,7 @@
+@import "../base/global";
+
+.contact {
+  &__wrapper{
+    @include grid-columns(grid, var(--contact_col-temp, 150px minmax(#{$gap-l}, 1fr)), var(--contact_gap, 10vw), flex-start);
+  }
+}

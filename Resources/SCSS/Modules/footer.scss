@@ -1,17 +1,15 @@
-@import '../base/global';
+@import "../base/global";
 
 footer {
   padding: $gap-l;
-  background-color: $color-bg-darken;
+  background-color: $color-black;
 
-  > .footer__copy {
+  > small {
+    display: block;
     width: 100%;
+    font-family: $font-text;
+    font-size: small;
+    color: $color-white;
     text-align: center;
-
-    small {
-      font-family: $font-text;
-      font-size: small;
-      color: $color-font;
-    }
   }
 }
