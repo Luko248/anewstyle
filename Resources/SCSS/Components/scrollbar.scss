@@ -12,19 +12,13 @@
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: $color-primary;
+    background: $color-bg;
     border-radius: $gap-s;
+    cursor: move;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: $color-primary--hover;
-  }
-
-  .gallery__layout{
-    /* Track */
-    ::-webkit-scrollbar-track {
-      background: $color-trans;
-    }
+    background: $color-bg-dark;
   }
 }

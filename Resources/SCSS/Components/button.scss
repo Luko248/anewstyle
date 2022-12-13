@@ -9,7 +9,7 @@
     --btn-font-size: large;
     --icon-trans-x: 0;
     @include flex-set(inline-flex, row, nowrap, $gap-l, center, center, center);
-    @include border('def', .2em, var(--color-white));
+    @include border('def', .15em, var(--color-white));
     min-width: var(--btn-width);
     padding-block: var(--btn-padding-y);
     padding-inline: var(--btn-padding-x);

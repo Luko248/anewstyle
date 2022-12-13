@@ -5,5 +5,6 @@ export function initBeforeAfterSlider() {
      baSliderInput.addEventListener('input', (e) => {
         let input = e.target as HTMLInputElement
         baSlider.style.setProperty('--ba-position', `${input.value}%`);
+        baSlider.style.setProperty('--ba-inline-size', `${baSlider.clientWidth}px`);
     })
 }   

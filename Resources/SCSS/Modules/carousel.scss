@@ -2,11 +2,24 @@
 
 .c-item {
     --c-item-photo_scale: 1;
+    --c-item-button_opacity: 0;
+    --c-item-button_translate-y: 1em;
     position: relative;
     min-block-size: 100vh;
 
+    &:after{
+        position: absolute;
+        inset: 0;
+        content: '';
+        background-image: radial-gradient(hsla(0, 0%, 0%, 50%), transparent);
+        z-index: 2;
+    }
+    
+
     &.is-active{
         --c-item-photo_scale: 1.2;
+        --c-item-button_opacity: 1;
+        --c-item-button_translate-y: 0;
         --c-item-text_animation: showText;
         --c-item-box_animation: whiteBox;
     }
@@ -17,6 +30,7 @@
         opacity: .9;
         scale: var(--c-item-photo_scale);
         transition: scale 5s linear;
+        z-index: 1;
 
         img {
             @include position;
@@ -29,16 +43,20 @@
 
     &__content {
         @include position;
-        @include flex-set(flex, column, wrap, var(--c_gap, 2em), center, center);
+        @include flex-set(flex, column, wrap, var(--c_gap, 3em), center, center);
+        padding-block-end: 1em;
         overflow: hidden;
+        z-index: 3;
+
         > h1,
-        strong {
+        > strong {
             position: relative;
+            display: inline-block;
             font-family: $font-title;
-            font-size: clamp($gap-xxl, 6em, 20vh);     
+            font-size: clamp($gap-xxl, 6em, 20vh);
+            font-weight: 500;     
             line-height: 1;
             color: var(--content_color, var(--color-trans));
-            text-shadow: var(--content_text-shadow, var(--color-trans) 1px 0 10px);
             animation: var(--c-item-text_animation) .1s linear forwards;
             animation-delay: 1s;
 
@@ -51,13 +69,19 @@
                 translate: -100%;
             }
         }
+
+        > .button{
+            opacity: var(--c-item-button_opacity);
+            translate: 0 var(--c-item-button_translate-y);
+            transition: opacity 1s var(--trans-fnc), 1s var(--trans-fnc);
+            transition-delay: 1s;
+        }
     }
 }
 
 @keyframes showText{
     to{
         --content_color: var(--color-white);
-        --content_text-shadow: var(--color-primary) 1px 0 10px;  
     }
 }
 

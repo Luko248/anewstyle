@@ -92,8 +92,9 @@
 							<img src="wwwroot/images/gallery/dark/rock_foil_2400x1200.png" alt="Kámen 1" />
 						</div>
 						<div class="c-item__content">
-							<h1>Kámen jako osvětlení interiéru 1</h1>
-							<a class="button">Chci vědet více</a>
+							<h1>Kámen jako osvětlení interiéru</h1>
+							<a class="button" href="#o-nas" 
+								aria-label="Přejít na sekci o nás">Chci vědet více</a>
 						</div>
 					</li>
 					<li class="splide__slide c-item">
@@ -101,8 +102,9 @@
 							<img src="wwwroot/images/gallery/light/rock_foil_2000x1200.png" alt="Kámen 2" />
 						</div>
 						<div class="c-item__content">
-							<h1>Kámen jako osvětlení interiéru 2</h1>
-							<small>Chci vědet více</small>
+							<strong>Kámen jako osvětlení interiéru</strong>
+							<a class="button" href="#galerie" 
+								aria-label="Přejít na sekci Galerie">Zobrazit Galerii</a>
 						</div>
 					</li>
 					<li class="splide__slide c-item">
@@ -110,8 +112,9 @@
 							<img src="wwwroot/images/gallery/dark/rock_foil_2200x1200.png" alt="Kámen 3" />
 						</div>
 						<div class="c-item__content">
-							<h1>Kámen jako osvětlení interiéru 3</h1>
-							<small>Chci vědet více</small>
+							<strong>Kámen jako osvětlení interiéru</strong>
+								<a class="button" href="#kontakt" 
+									aria-label="Přejít na kontakt">Kontaktujte nás</a>
 						</div>
 					</li>
 					<li class="splide__slide c-item">
@@ -119,8 +122,9 @@
 							<img src="wwwroot/images/gallery/dark/rock_foil_2000x800.png" alt="Kámen 4" />
 						</div>
 						<div class="c-item__content">
-							<h1>Kámen jako osvětlení interiéru 4</h1>
-							<small>Chci vědet více</small>
+							<strong>Kámen jako osvětlení interiéru</strong>
+							<a class="button" href="#galerie" 
+								aria-label="Přejít na sekci Galerie">Zobrazit Galerii</a>
 						</div>
 					</li>
 				</ul>
@@ -139,12 +143,18 @@
 				</p>
 				<div id="baSlider" class="ba-slider">
 					<div class="image-container">
-						<img class="image-before slider-image"
+						<div class="image-before">
+							<img class="slider-image"
 							src="https://i.picsum.photos/id/1015/6000/4000.jpg?hmac=aHjb0fRa1t14DTIEBcoC12c5rAXOSwnVlaA5ujxPQ0I"
 							alt="color photo" />
-						<img class="image-after slider-image"
+							<strong>Ve dne</strong>
+						</div>
+						<div class="image-after">
+							<img class="slider-image"
 							src="https://i.picsum.photos/id/1015/6000/4000.jpg?hmac=aHjb0fRa1t14DTIEBcoC12c5rAXOSwnVlaA5ujxPQ0I"
 							alt="black and white" />
+							<strong>V noci</strong>
+						</div>
 					</div>
 					<input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown"
 						class="slider" />
